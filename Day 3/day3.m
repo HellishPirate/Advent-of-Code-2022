@@ -17,13 +17,13 @@ for i = 1:300
     sans_nans = sum(isnan(unicodeValues(i,:)));
     a1 = unicodeValues(i,1:(end-sans_nans)/2);
     b1 = unicodeValues(i,((end-sans_nans)/2)+1:end-sans_nans);
-    dupes = intersect(a1,b1);
-    total1 = total1 + dupes;
+    dupes1 = intersect(a1,b1);
+    total1 = total1 + dupes1;
 end
 
 total2 = 0;
 for j = 3:3:300
     a1 = unicodeValues(j-2:j,:);
-    dupes1 = intersect(intersect(a1(1,:),a1(2,:)),a1(3,:));
-    total2 = total2 + dupes1;
+    dupes2 = intersect(intersect(a1(1,:),a1(2,:)),a1(3,:));
+    total2 = total2 + dupes2;
 end
