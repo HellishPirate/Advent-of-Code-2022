@@ -1,4 +1,3 @@
-%% day 2 part 2
 clear variables
 load day_2_input.mat
 c1 = day2input(:,1);
