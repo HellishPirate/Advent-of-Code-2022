@@ -1,4 +1,3 @@
-%% part 1
 clear variables
 day6input = readlines("day6input.txt");
 unicodeValues = double(char(day6input));
@@ -9,10 +8,12 @@ for i = 4:numel(unicodeValues)
         break
     end
 end
-%% part 2
-for i = 14:numel(unicodeValues)
-    uniques = unique(unicodeValues(i-13:i),'stable');
+disp(i) % part 1
+
+for j = 14:numel(unicodeValues)
+    uniques = unique(unicodeValues(j-13:j),'stable');
     if numel(uniques) == 14
         break
     end
 end
+disp(j) % part 2
