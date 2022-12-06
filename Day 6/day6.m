@@ -1,6 +1,4 @@
-clear variables
-day6input = readlines("day6input.txt");
-unicodeValues = double(char(day6input));
+unicodeValues = double(char(readlines("day6input.txt")));
 
 for i = 4:numel(unicodeValues)
     uniques = unique(unicodeValues(i-3:i),'stable');
