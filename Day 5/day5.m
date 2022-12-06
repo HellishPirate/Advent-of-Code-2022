@@ -11,6 +11,10 @@ for i = 1:504
     C{z} = [B2C; C{z}];
     C{y}(1:x) = [];
 end
+ans1 = string(C{1}(1));
+for j = 2:9
+    ans1 = ans1 + string(C{j}(1));
+end
 %% part 2
 clear variables
 load day_5_input.mat
@@ -23,4 +27,8 @@ for i = 1:504
     B2C = cellstr(B1);
     C{z} = [B2C; C{z}];
     C{y}(1:x) = [];
+end
+ans2 = string(C{1}(1));
+for j = 2:9
+    ans2 = ans2 + string(C{j}(1));
 end
