@@ -28,4 +28,3 @@ for i = 1:numel(total_cycles)
 end
 
 ans1 = sum(cum_sum(pos).*n');
-test = cum_sum(pos).*n';
