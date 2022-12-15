@@ -6,8 +6,7 @@ cum_sum = cumsum(values);
 
 instructions(instructions == "addx") = 2;
 instructions(instructions == "noop") = 1;
-count = double(instructions);
-count = [1; count];
+count = [1; double(instructions)];
 
 all_cycles = (0:240)';
 cum_sum_actual = repelem(cum_sum,count);
