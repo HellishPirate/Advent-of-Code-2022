@@ -31,4 +31,4 @@ n1 = 1:40:280;
 for i = 1:6
     screen(i,:) = lit_pixels(n1(i):(n1(i+1))-1);
 end
-screen(screen == 1) = NaN;
+disp(char(screen))
