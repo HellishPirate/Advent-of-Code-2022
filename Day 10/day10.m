@@ -28,7 +28,6 @@ for i = 1:numel(all_cycles)
 end
 
 ans1 = sum(cum_sum_actual(pos).*n');
-test1 = cum_sum_actual(pos);
 
 cum_sum_actual1 = cum_sum_actual + 1;
 cum_sum_actual2 = cum_sum_actual - 1;
