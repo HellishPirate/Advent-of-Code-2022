@@ -18,15 +18,8 @@ all_cycles = (0:240)';
 cum_sum_actual = repelem(cum_sum,count);
 cum_sum_actual = [1; cum_sum_actual];
 n = (20:40:240);
-pos = zeros(numel(n),1);
 
-for i = 1:numel(all_cycles)
-    for j = 1:numel(pos)
-        pos(j) = find(all_cycles == n(j))-1;
-    end
-end
-
-ans1 = sum(cum_sum_actual(pos).*n');
+ans1 = sum(cum_sum_actual(n).*n');
 
 ac2 = [0:39 0:39 0:39 0:39 0:39 0:39 0:1]';
 
