@@ -4,14 +4,9 @@ load day10input.mat
 values = [1; values];
 cum_sum = cumsum(values);
 
-count = zeros(numel(instructions),1);
-for i = 1:numel(instructions)
-    if instructions(i) == "addx"
-        count(i) = 2;
-    else
-        count(i) = 1;
-    end
-end
+instructions(instructions == "addx") = 2;
+instructions(instructions == "noop") = 1;
+count = double(instructions);
 count = [1; count];
 
 all_cycles = (0:240)';
