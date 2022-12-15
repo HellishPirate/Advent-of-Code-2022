@@ -13,7 +13,6 @@ for i = 1:numel(instructions)
     end
 end
 count = [1; count];
-total_cycles = cumsum(count);
 
 all_cycles = (0:240)';
 cum_sum_actual = repelem(cum_sum,count);
