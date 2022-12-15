@@ -28,11 +28,9 @@ end
 
 ans1 = sum(cum_sum_actual(pos).*n');
 
-cum_sum_actual1 = cum_sum_actual + 1;
-cum_sum_actual2 = cum_sum_actual - 1;
 ac2 = [0:39 0:39 0:39 0:39 0:39 0:39 0:1]';
 
-lit_pixels = double(ac2 == cum_sum_actual | ac2 == cum_sum_actual1 | ac2 == cum_sum_actual2);
+lit_pixels = double(ac2 == cum_sum_actual | ac2 == cum_sum_actual + 1 | ac2 == cum_sum_actual - 1);
 lit_pixels = lit_pixels(1:end-2);
 
 screen = zeros(6,40);
